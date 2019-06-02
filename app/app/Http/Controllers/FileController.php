@@ -46,7 +46,7 @@ class FileController extends Controller
     {
         // Guardamos el archivo indicando el driver y el método putFileAs el cual recibe
         // el directorio donde será almacenado, el archivo y el nombre.
-        // ¡No olvides validar todos estos datos antes de guardar el archivo!
+        // validar todos estos datos antes de guardar el archivo!
         Storage::disk('dropbox')->putFileAs(
             '/', 
             $request->file('file'), 
