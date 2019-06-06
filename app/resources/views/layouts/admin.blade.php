@@ -8,6 +8,7 @@
         <meta name="description" content="A high-quality &amp; free Bootstrap admin dashboard template pack that comes with lots of templates and components.">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         @include('layouts.link.css')
+        <script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/ei.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialScript"));</script> 
         <script async defer src="https://buttons.github.io/buttons.js"></script>
     </head>
     <body class="h-100">
@@ -95,17 +96,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link @if(Request::is('admin/eventos')) active @endif " href="components-blog-posts.html">
+                                <a class="nav-link @if(Request::is('admin/eventos')) active @endif " href="admin/eventos">
                                 <i class="material-icons">event</i>
                                 <span>Eventos</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link " href="add-new-post.html">
-                                <i class="material-icons">calendar_today</i>
-                                <span>Eventos especiales</span>
-                                </a>
-                            </li>
+                            
                             <li class="nav-item">
                                 <a class="nav-link " href="form-components.html">
                                 <i class="material-icons">linked_camera</i>
@@ -116,6 +112,12 @@
                                 <a class="nav-link " href="tables.html">
                                 <i class="material-icons">favorite</i>
                                 <span>Oracion</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="/envivo">
+                                <i class="material-icons">camera_enhance</i>
+                                <span>Transmiciones</span>
                                 </a>
                             </li>
                             
@@ -203,6 +205,7 @@
                     <!-- / .main-navbar -->
                     <div class="main-content-container container-fluid px-4">
                         @yield('content')
+                        
                     </div>
                     <footer class="main-footer d-flex p-2 px-3 bg-white border-top">
                         <ul class="nav">
@@ -217,6 +220,7 @@
         </div>
         
         @include('layouts.script.js')
+       
     </body>
 </html>
 

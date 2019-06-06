@@ -9,7 +9,6 @@
             <textarea required name="litleDescription" id="" cols="30" class="form-control form-control-lg mb-3"
                 rows="10">{{$event->litleDescription}}</textarea>
         </div>
-
         <div class="form-group">
             <select name="day" required class="form-control form-control-lg mb-3" id="">
                 <option value="{{$event->day}}" selected>
@@ -26,6 +25,20 @@
                 <option value="Viernes">Viernes</option>
                 <option value="Sabado">Sabado</option>
                 <option value="Domingo">Domingo</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select name="type" required class="form-control form-control-lg mb-3" id="">
+                <option value="{{$event->day}}" selected>
+                    @if($event->day == null)
+                        Selecciona el tipo de evento
+                    @else
+                        {{$event->type}}
+                    @endif
+                </option>
+                <option value="especial">1.Evento especial</option>
+                <option value="normal">2.Evento normal</option>
+                
             </select>
         </div>
 

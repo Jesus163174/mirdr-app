@@ -29,4 +29,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
     Route::resource('eventos','EventController');
+    
 });
+
+Route::get('envivo','TransmissionController@envivo');
+Route::post('envivo','TransmissionController@store');
+Route::delete('envivo/detener','TransmissionController@detener');

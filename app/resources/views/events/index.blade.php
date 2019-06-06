@@ -24,7 +24,12 @@
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">
-                            <a class="text-fiord-blue" href="#">{{$event->title}}</a>
+                            <a class="text-fiord-blue" href="#">
+                                {{$event->title}} 
+                                @if($event->type == 'especial')
+                                    <i class="material-icons" style="color:black !important;">star</i>
+                                @endif
+                            </a>
                         </h5>
                         <p class="card-text d-inline-block mb-3">{{$event->litleDescription}}</p>
                         <!--Only special events-->
